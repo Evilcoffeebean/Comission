@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy file="C:\Users\Zvijer\Desktop\Intellij Projects\Boost\target/BoostCmd.jar" todir="C:\Users\Zvijer\Desktop\Prog\Servers\MC Server 1.11\plugins"/>
+</target>
+</project>

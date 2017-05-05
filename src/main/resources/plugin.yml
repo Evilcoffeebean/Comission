@@ -1,0 +1,7 @@
+name: ${project.name}
+version: ${project.version}
+main: me.vengeancey.boost.Boost
+author: Vengeancey
+commands:
+  activate:
+    description: Launch yourself into the air.
