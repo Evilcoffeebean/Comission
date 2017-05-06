@@ -12,6 +12,12 @@ import org.bukkit.entity.Player;
  */
 public class BoostCommand implements CommandExecutor {
 
+    private Configuration config;
+
+    public BoostCommand(Configuration config) {
+        this.config = config;
+    }
+
     @Override
     public boolean onCommand(CommandSender caller, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("activate")) {
@@ -24,7 +30,7 @@ public class BoostCommand implements CommandExecutor {
             if (!active) {
                 if (!combat) {
                     Boost.getInstance().getActivationManager().activatePlayer(player);
-                    PlayerUtil.launchPlayer(player, 7);
+                    PlayerUtil.launchPlayer(player, config.get("blocks-to-launch"));
                     return true;
                 } else {
                     player.sendMessage(ChatColor.RED + "You are currently in combat.");
